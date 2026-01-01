@@ -1,0 +1,1 @@
+UPDATE atlas_driver_offer_bpp.driver_information SET num_of_locks = 1 WHERE blocked = true;

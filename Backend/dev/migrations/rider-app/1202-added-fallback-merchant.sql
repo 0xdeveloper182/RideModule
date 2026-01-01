@@ -1,0 +1,1 @@
+UPDATE atlas_app.merchant SET fallback_short_id = short_id;

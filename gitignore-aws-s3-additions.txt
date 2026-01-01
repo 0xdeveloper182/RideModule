@@ -1,0 +1,114 @@
+# Add these lines to your .gitignore to prevent accidental credential commits
+
+# ===========================
+# AWS S3 Configuration
+# ===========================
+# Environment variable files containing credentials
+Backend/.env.local
+Backend/.env
+.env
+.env.local
+.env.*.local
+
+# AWS CLI credentials and config
+~/.aws/credentials
+~/.aws/config
+.aws/credentials
+.aws/config
+
+# ===========================
+# AWS Related
+# ===========================
+# AWS session tokens
+.aws-session-token
+aws-session.json
+
+# S3 Local Mock Storage (if using local S3 mock)
+s3/local/*
+!s3/local/.gitkeep
+
+# ===========================
+# Secret Files (General)
+# ===========================
+*.secret
+*.key
+*.pem
+*.pfx
+*.p12
+*.jks
+*.keystore
+
+# ===========================
+# IDE and Editor Specific
+# ===========================
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*~
+.DS_Store
+
+# Environment Setup Scripts (with real credentials)
+aws-setup-*.sh
+aws-setup-*.ps1
+!aws-setup.sh
+!aws-setup.ps1
+
+# ===========================
+# IDE Specific Credentials
+# ===========================
+.env.vscode
+.idea/aws.xml
+.idea/runConfigurations/aws*.xml
+
+# ===========================
+# Build and Dependencies
+# ===========================
+dist/
+dist-newstyle/
+*.o
+*.so
+*.dylib
+*.dyn_hi
+*.dyn_o
+
+# ===========================
+# Logs and Temporary Files
+# ===========================
+*.log
+*.log.*
+/tmp/
+/temp/
+/logs/
+
+# ===========================
+# OS Specific
+# ===========================
+.DS_Store
+Thumbs.db
+.env.bak
+.env.backup
+
+# ===========================
+# Docker
+# ===========================
+# Don't include docker compose with real credentials
+docker-compose.override.yml
+.env.docker
+docker/.env
+
+# ===========================
+# CI/CD (if not using secrets service)
+# ===========================
+.github/secrets.json
+.gitlab-ci.local.yml
+.circleci/config.local.yml
+
+# ===========================
+# Backups of sensitive files
+# ===========================
+*.bak
+*.backup
+*.backup.*
+*.old
